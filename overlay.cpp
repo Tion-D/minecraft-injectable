@@ -73,17 +73,7 @@ BOOL WINAPI hkWglSwapBuffers(HDC hdc)
 
     if (g_ShowMenu)
     {
-        ImGui_ImplOpenGL3_NewFrame();
-        ImGui_ImplWin32_NewFrame();
-        ImGui::NewFrame();
-
-        ImGui::Begin("Player ESP Menu");
-        static bool espEnabled = false;
-        ImGui::Checkbox("Enable Player ESP", &espEnabled);
-        ImGui::End();
-
-        ImGui::Render();
-        ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+        //IMGUI overlay
     }
 
     return oWglSwapBuffers(hdc);
